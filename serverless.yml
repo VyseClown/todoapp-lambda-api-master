@@ -24,7 +24,7 @@ functions:
               - Referer
       - http:
           path: api/todos/{id}
-          method: any
+          method: delete
           request:
             parameters:
               paths:
@@ -38,3 +38,23 @@ functions:
               - Origin
               - User-Agent
               - Referer
+      - http:
+          path: api/todos/{id}
+          method: put
+          request:
+            parameters:
+              paths:
+                id: true
+          cors:
+            origin: "*"
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Startlower
+              - Text
+              - Access-Control-Allow-Headers
+              - Access-Control-Allow-Origin
